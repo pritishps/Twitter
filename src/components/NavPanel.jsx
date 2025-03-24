@@ -9,6 +9,7 @@ function NavPanel() {
   return (
     
     <>
+    {/* Nav Bar Desktop and Tablet Views */}
       <div className={`full-screen-side-nav-panel ${theme}`}>
         
         <div className='navigation-buttons-container'>
@@ -59,6 +60,49 @@ function NavPanel() {
             <div className={`navigation-container-top-menu-option`}>...</div>
         </div>
 
+      </div>
+
+
+
+      {/* Mobile View */}
+      {/* TOP Navigation panel */}
+      <div className='mobile-nav-top-panel'>
+          <img className={`loggedin-user-profile-image`} src="images/profile-image/loggedin-user.png" alt="profile image" />
+          <div>
+            <NavLink to={"/"} className={`x-logo-top x-logo-top-mobile`}  > <img src={`images/logo${theme}.png`} alt="x.com logo" /> </NavLink>
+          </div>
+          <div className={`navigation-container-top-menu-option mobile-triple-dot`}>...</div>
+      </div>
+
+      {/* Buttom Navigation panel */}
+
+      <div  className='mobile-nav-bottom-panel'>
+          <div>
+            <NavLink  className={`navigation-buttons`} to={'/'} >
+            <i class="bi bi-house-door-fill"></i>
+            </NavLink>
+          </div>
+          <div>
+            <NavLink  className={`navigation-buttons`} to={'/explore'} >
+            <i className="bi bi-search"></i>
+            </NavLink>  
+          </div>
+          <div>
+            <NavLink  className={`navigation-buttons`} to={'/notifications'} >
+            <i class="bi bi-bell"></i>
+            </NavLink>
+          </div>
+          <div>
+            <NavLink  className={`navigation-buttons`} to={'/messages'} >
+            <i class="bi bi-envelope"></i>
+            </NavLink>
+          </div>
+          <div>
+            <NavLink  className={`navigation-buttons`} to={'/communities'} >
+            <i class="bi bi-people"></i>
+            </NavLink>
+          </div>
+          
       </div>
     </>
   )

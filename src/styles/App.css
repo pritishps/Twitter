@@ -4,3 +4,15 @@
     display: flex;
     justify-content: center;
 }
+
+.main-app-content{
+    flex: 0.8;
+  }
+  
+  @media (max-width:498px){
+  
+    .main-app-content{
+      margin-top: 65px;
+      flex: 1;
+    }
+  }

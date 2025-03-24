@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100vh;
 }
 
 .x-logo-top{
@@ -168,5 +169,70 @@
     }
     .navigation-container-top-menu-option{
         display: none;
+    }
+}
+
+
+
+/* Mobile Nav Bar Design */
+ .mobile-nav-bar-panel{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: none;
+ }
+
+ .mobile-nav-top-panel{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 5px 12px;
+    background-color: var(--body-background);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.x-logo-top-mobile{
+    margin: 3px;
+    flex: 1;
+    text-align: center;
+}
+
+.mobile-nav-bottom-panel{
+    display: none;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    padding: 5px 10px;
+    justify-content: space-between;
+    background-color: var(--body-background);
+}
+
+@media (max-width:498px){
+    .full-screen-side-nav-panel{
+        display: none;
+    }
+    .mobile-nav-bar-panel{
+        display: flex;
+    }
+    .mobile-nav-bottom-panel{
+        display: flex;
+    }
+    .mobile-nav-top-panel{
+        display: flex;
+    }
+    .mobile-triple-dot{
+        display: block;
+    }
+    .navigation-buttons{
+        padding: 5px 13px;
     }
 }

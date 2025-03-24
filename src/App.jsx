@@ -11,9 +11,11 @@ function App() {
     <div className={"app-container " +theme}>
       <BrowserRouter>
         <NavPanel/>
-        <Routes>
-          <Route path="/" element={ <Home/> } />
-        </Routes>
+        <div className="main-app-content">
+          <Routes>
+            <Route path="/" element={ <Home/> } />
+          </Routes>
+        </div>
       </BrowserRouter>
     </div>
   )

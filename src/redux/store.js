@@ -1,8 +1,8 @@
 import {createStore} from 'redux';
 
 const initialState = {
-    theme:"",
-    // theme:"dark",
+    // theme:"",
+    theme:"dark",
 
 }
 
