@@ -18,7 +18,7 @@ function NavPanel() {
           </div>
           <div>
             <NavLink  className={`navigation-buttons`} to={'/'} >
-            <i class="bi bi-house-door-fill"><span>Home</span></i>
+            <i className="bi bi-house-door-fill"><span>Home</span></i>
             </NavLink>
           </div>
           <div>
@@ -28,22 +28,22 @@ function NavPanel() {
           </div>
           <div>
             <NavLink  className={`navigation-buttons`} to={'/notifications'} >
-            <i class="bi bi-bell"><span>Notifications</span> </i>
+            <i className="bi bi-bell"><span>Notifications</span> </i>
             </NavLink>
           </div>
           <div>
             <NavLink  className={`navigation-buttons`} to={'/messages'} >
-            <i class="bi bi-envelope"><span>Messages</span> </i>
+            <i className="bi bi-envelope"><span>Messages</span> </i>
             </NavLink>
           </div>
           <div>
             <NavLink  className={`navigation-buttons`} to={'/communities'} >
-            <i class="bi bi-people"><span>Communities</span> </i>
+            <i className="bi bi-people"><span>Communities</span> </i>
             </NavLink>
           </div>
           <div>
             <NavLink  className={`navigation-buttons`} to={'/profile'} >
-            <i class="bi bi-person"><span>Profile</span> </i>
+            <i className="bi bi-person"><span>Profile</span> </i>
             </NavLink>
           </div>
           <button className={`post-button ${theme}`}>
@@ -79,7 +79,7 @@ function NavPanel() {
       <div  className='mobile-nav-bottom-panel'>
           <div>
             <NavLink  className={`navigation-buttons`} to={'/'} >
-            <i class="bi bi-house-door-fill"></i>
+            <i className="bi bi-house-door-fill"></i>
             </NavLink>
           </div>
           <div>
@@ -89,17 +89,17 @@ function NavPanel() {
           </div>
           <div>
             <NavLink  className={`navigation-buttons`} to={'/notifications'} >
-            <i class="bi bi-bell"></i>
+            <i className="bi bi-bell"></i>
             </NavLink>
           </div>
           <div>
             <NavLink  className={`navigation-buttons`} to={'/messages'} >
-            <i class="bi bi-envelope"></i>
+            <i className="bi bi-envelope"></i>
             </NavLink>
           </div>
           <div>
             <NavLink  className={`navigation-buttons`} to={'/communities'} >
-            <i class="bi bi-people"></i>
+            <i className="bi bi-people"></i>
             </NavLink>
           </div>
           

@@ -6,9 +6,15 @@
 }
 
 .main-app-content{
-    flex: 0.8;
+    flex: 0.9;
   }
-  
+
+/* @media (max-width:768px){
+  .main-app-content{
+    flex: 0.5;
+  }
+} */
+
   @media (max-width:498px){
   
     .main-app-content{

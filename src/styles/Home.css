@@ -1,5 +1,9 @@
 .home-panel{
-    border: 1px solid white;
-    /* width: 1000px; */
-    
+
 }
+
+.home-feed-container{
+    /* border: 1px solid var(--normal-text); */
+    max-width: 500px;
+}
+
