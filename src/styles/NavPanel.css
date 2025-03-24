@@ -1,0 +1,172 @@
+.full-screen-side-nav-panel{
+    width:280px;
+    color: var(--normal-text);
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.x-logo-top{
+    display: inline-block;
+    padding: 10px;
+    border-radius: 50%;
+    margin-bottom:35px ;
+}
+
+.x-logo-top:hover{
+    background-color: var(--hover-item);
+}
+
+.x-logo-top >  img{
+    width: 25px;
+}
+
+
+
+/* Navigation Buttons Design */
+.navigation-buttons-container{
+    /* padding-top: 35px; */
+    flex-direction: column;
+    /* gap: 20px; */
+}
+
+
+.navigation-buttons{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--normal-text);
+    padding: 5px 10px;
+    border-radius: 40px;
+}
+
+.navigation-buttons:hover{
+    background-color: var(--hover-item);
+
+}
+
+.navigation-buttons > i{
+    font-size: 25px;
+
+}
+
+
+.navigation-buttons > i > span{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 550;
+    margin-left:20px ;
+}
+
+
+.post-button{
+    display: block;
+    background-color: var(--normal-text);
+    color: var(--body-background);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 550;
+    width: 100%;
+    margin-top: 30px;
+    padding: 12px 0;
+    border-radius: 40px;
+    outline: none;
+    border: none;
+}
+
+.post-button:hover{
+    background-color: var(--secondary-text);
+
+}
+
+.feather-logo{
+    display: none;
+}
+
+
+/* PROFILE INFO CONTAINER */
+.profile-info-display-container{
+    display: flex;
+    width: 240px;
+    margin: 10px auto;
+    /* margin-top: 10px; */
+    padding: 12px 16px;
+    border-radius: 80px;
+    cursor: pointer;
+    justify-content: center;
+    
+}
+
+.profile-info-display-container:hover{
+    background-color: var(--hover-item);
+}
+
+.loggedin-user-profile-image{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.loggedin-user-account-headings {
+    margin: 0px;
+    padding: 0px 12px;
+    /* background-color: white; */
+}
+.loggedin-user-account-headings > h2{
+    width: 9em;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--normal-text);
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+.loggedin-user-account-headings > p{
+    color: var(--normal-text);
+    margin: 0px ;
+    color: var(--secondary-text);
+    /* font-weight: 600; */
+    font-size: 15px;
+}
+
+.navigation-container-top-menu-option{
+    color: var(--normal-text);
+    font-weight: 800;
+}
+
+@media (max-width: 1024px) {
+    .full-screen-side-nav-panel{
+        width: 90px;
+    }
+
+    .navigation-buttons >i> span{
+        display: none;
+    }
+    .post-button{
+        width: 50px;
+        height: 50px;
+        padding: auto;
+        justify-content: center;
+        align-self: center;
+    }
+    .full-screen-post-text{
+        display: none;
+    }
+    .feather-logo{
+        display: inline;
+    }
+
+    .loggedin-user-account-headings {
+        display: none;
+    }
+    .profile-info-display-container{
+        width: 40px;
+        padding: 0 0;
+        /* margin: 0px; */
+    }
+    .navigation-container-top-menu-option{
+        display: none;
+    }
+}
