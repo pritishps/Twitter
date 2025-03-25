@@ -1,0 +1,54 @@
+[
+    {
+        "postId": 101,
+        "userName": "John Doe",
+        "userId": "johndoe",
+        "time": "2h",
+        "postText": "Breaking news! The stock market hits an all-time high today.",
+        "likes": 120,
+        "liked": true,
+        "comments": 45,
+        "reposts": 20,
+        "views": 1500,
+        "category": "News"
+    },
+    {
+        "postId": 102,
+        "userName": "SportsFan99",
+        "userId": "sportsfan99",
+        "time": "30m",
+        "postText": "What a game! The Lakers just secured their spot in the finals! #NBAFinals",
+        "likes": 340,
+        "liked": false,
+        "comments": 78,
+        "reposts": 65,
+        "views": 2300,
+        "category": "Sports"
+    },
+    {
+        "postId": 103,
+        "userName": "MovieBuff",
+        "userId": "moviebuff",
+        "time": "5h",
+        "postText": "The new sci-fi thriller just dropped, and it’s already breaking box office records! 🎥🔥",
+        "likes": 500,
+        "liked": true,
+        "comments": 150,
+        "reposts": 90,
+        "views": 5400,
+        "category": "Entertainment"
+    },
+    {
+        "postId": 104,
+        "userName": "Jane Smith",
+        "userId": "janesmith",
+        "time": "1h",
+        "postText": "This new AI technology is changing the way we work. What are your thoughts?",
+        "likes": 200,
+        "liked": false,
+        "comments": 70,
+        "reposts": 30,
+        "views": 1800,
+        "category": "Trending"
+    }
+]

@@ -2,6 +2,9 @@
     display: flex;
     background-color: inherit;
     justify-content: space-evenly;
+    /* overflow-x: scroll; */
+    /* width: 100%; */
+    /* scrollbar-width: none; */
 }
 
 .filter-type {

@@ -17,6 +17,8 @@
 @media (max-width:498px){
     .home-feed-container{
         height: 92vh;
+        padding-bottom: 58px;
+
     }
 }
 
