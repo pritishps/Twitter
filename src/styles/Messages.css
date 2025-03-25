@@ -1,0 +1,64 @@
+.top-messages-heading{
+    color: var(--normal-text);
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--hover-item);
+    padding: 20px 20px;
+}
+p{
+    margin-bottom:0px ;
+}
+.message-container{
+    cursor: pointer;
+    display: flex;
+    padding: 10px 15px;
+    flex: 1;
+}
+
+.message-container:hover{
+    background-color: var(--hover-item);
+}
+
+.message-container > img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+
+.message-content{
+    width: 100%;
+    padding: 0 10px;
+}
+.message-headings{
+    display: flex;
+    justify-content: left;
+    flex: 1;
+    width: 90%;
+    gap: 5px;
+    font-size: 13px;
+    color: var(--secondary-text);
+
+}
+
+
+.message-headings > h1{
+    color: var(--normal-text);
+    font-size: 15px;
+    font-weight: 700;
+    white-space: nowrap;
+    /* width: 7em; */
+    width:40%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+.message-content>p{
+    color: var(--secondary-text);
+    font-size: 15px;
+    /* white-space: nowrap; */
+    /* overflow:hidden ; */
+    text-overflow: ellipsis;
+}

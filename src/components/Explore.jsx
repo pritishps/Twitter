@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "./../styles/Explore.css"
 import FeedFilterComponent from './FeedFilterComponent'
+import Post from "./Post";
 
 function Explore() {
 
@@ -10,7 +11,7 @@ function Explore() {
     const [searchFilter,setSearchFilter] = useState("People")
     const [feedData,setFeedData] = useState([])
 
-    const searchFilterTypes = ["People","Post","Category"];
+    const searchFilterTypes = ["All","People","Post","Category"];
 
 
     const handleSearch = (e)=>{
@@ -33,11 +34,23 @@ function Explore() {
             //   console.log(allPostData)
                 if(!searchKeyword){
                 // IF search keyword is not there then show according to trending filters;
-                allPostData = allPostData.filter(post=>post.category===trendingFilter)
-                setFeedData(allPostData)
-              }
-
-
+                  allPostData = allPostData.filter(post=>post.category===trendingFilter)
+                  setFeedData(allPostData)
+                }
+                else{
+                  allPostData = allPostData.filter(post=>{
+                    if(searchFilter==="All"){
+                      return JSON.stringify(post).toLowerCase().includes(searchKeyword.toLowerCase())
+                    }else if(searchFilter==="People"){
+                      return post.userName.toLowerCase().includes(searchKeyword.toLowerCase());
+                    }else if(searchFilter === "Post"){
+                      return post.postText.toLowerCase().includes(searchKeyword.toLowerCase());
+                    }else if(searchFilter==="Category"){
+                      return post.category.toLowerCase()===searchFilter.toLowerCase()
+                    }
+                  })
+                  setFeedData(allPostData)
+                }
             } catch (err) {
               console.log("Error:", err);
             }
@@ -50,10 +63,10 @@ function Explore() {
 
 
         return ()=>clearTimeout(timeoutSearch)
-    },[searchKeyword])
+    },[searchKeyword,searchFilter,trendingFilter])
 
   return (
-    <div className='explore-feed-container'>
+    <div className='feed-container'>
         <div className='search-container'>
             <i className="bi bi-search"></i>
             <input onChange={handleSearch} value={searchKeyword} type="text" name="" id="" placeholder='Search' />
@@ -66,9 +79,9 @@ function Explore() {
             selected={searchFilter} setSelected={setSearchFilter}/>
         }
 
-        {feedData.map(post=>{
+        {feedData.map(postData=>{
             return(
-                <h1>{post.postText}</h1>
+                <Post key={postData.postId} data={postData}/>
             )
         })}
     </div>

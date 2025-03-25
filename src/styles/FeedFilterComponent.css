@@ -25,6 +25,16 @@
     background-color: white;
 } */
 
+@media (pointer: coarse) {
+    .filter-type:hover {
+      background-color: initial;
+    }
+    .filter-type:active {
+      background-color: var(--hover-item); 
+    }
+  }
+
+
 .filter-type >p{
     margin-bottom: 0px;
     padding-bottom: 10px ;

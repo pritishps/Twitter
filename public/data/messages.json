@@ -1,0 +1,72 @@
+[
+    {
+        "messageId": 1,
+        "userName": "Alice Johnson",
+        "userId": "alice123",
+        "lastMessage": "Hey, are you free for lunch tomorrow?",
+        "messageDate": "2025-03-25"
+    },
+    {
+        "messageId": 2,
+        "userName": "Mark Brown",
+        "userId": "markyboy",
+        "lastMessage": "Sounds good! Let’s meet at 12 PM.",
+        "messageDate": "2025-03-25"
+    },
+    {
+        "messageId": 3,
+        "userName": "Sarah White",
+        "userId": "sarahw_89",
+        "lastMessage": "I’m sending you the report now. Let me know if you need anything else. asjkdk dasdkjash djk jk s akd kj kska djksakdsh aaksh ksakd sa djkasdk as dhkjahksh aksja dkh    ",
+        "messageDate": "2025-03-25"
+    },
+    {
+        "messageId": 4,
+        "userName": "Tom Green",
+        "userId": "tommy_g",
+        "lastMessage": "Got it, I’ll start working on the task now.",
+        "messageDate": "2025-03-24"
+    },
+    {
+        "messageId": 5,
+        "userName": "Emma Wilson",
+        "userId": "emma_wilson",
+        "lastMessage": "Can you send me the files from yesterday’s meeting?",
+        "messageDate": "2025-03-24"
+    },
+    {
+        "messageId": 6,
+        "userName": "David Miller",
+        "userId": "davidm_12",
+        "lastMessage": "Sure! I’ll be there in 10 minutes.",
+        "messageDate": "2025-03-24"
+    },
+    {
+        "messageId": 7,
+        "userName": "Jake Cooper",
+        "userId": "jake_coop",
+        "lastMessage": "Let’s catch up later this week, maybe on Friday?",
+        "messageDate": "2025-03-23"
+    },
+    {
+        "messageId": 8,
+        "userName": "Mia Lopez",
+        "userId": "mialopez",
+        "lastMessage": "Looking forward to the project presentation! Let’s make it great.",
+        "messageDate": "2025-03-22"
+    },
+    {
+        "messageId": 9,
+        "userName": "Oliver Smith",
+        "userId": "oliver_smith",
+        "lastMessage": "I have shared the documents with you. Please review them.",
+        "messageDate": "2025-03-21"
+    },
+    {
+        "messageId": 10,
+        "userName": "Sophia Lee",
+        "userId": "sophia_lee",
+        "lastMessage": "Thanks for your help with the presentation!",
+        "messageDate": "2025-03-20"
+    }
+]

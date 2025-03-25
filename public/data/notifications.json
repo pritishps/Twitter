@@ -1,0 +1,42 @@
+[
+    {
+        "notificationId": 1,
+        "notificationContent": "You have a new friend request from Alice Johnson. Click here to view her profile and accept the request."
+    },
+    {
+        "notificationId": 2,
+        "notificationContent": "Mark Brown liked your post: 'Excited for the weekend!' It looks like your post is getting some attention!"
+    },
+    {
+        "notificationId": 3,
+        "notificationContent": "Your password was successfully changed. If you didn’t make this change, please contact support immediately."
+    },
+    {
+        "notificationId": 4,
+        "notificationContent": "Sarah White commented on your post: 'That book was amazing too!' You should check out her recommendations as well."
+    },
+    {
+        "notificationId": 5,
+        "notificationContent": "You have a new follower: Tom Green. Tom has been enjoying your posts and decided to follow your account."
+    },
+    {
+        "notificationId": 6,
+        "notificationContent": "Emma Wilson mentioned you in a comment: '@yourusername Check this out!' She thinks this post is relevant to your interests."
+    },
+    {
+        "notificationId": 7,
+        "notificationContent": "Your profile picture was updated successfully. You can change it anytime if you're not happy with the current one."
+    },
+    {
+        "notificationId": 8,
+        "notificationContent": "Jake Cooper invited you to join a new group: 'Sports Enthusiasts'. Join now to discuss the latest sports events with like-minded people."
+    },
+    {
+        "notificationId": 9,
+        "notificationContent": "David Miller shared your post: 'Tech advancements are insane!' Your content is being appreciated by others in your network."
+    },
+    {
+        "notificationId": 10,
+        "notificationContent": "Your event reminder: 'Team Meeting at 3 PM today'. Make sure to be prepared with the agenda before the meeting starts."
+    }
+]

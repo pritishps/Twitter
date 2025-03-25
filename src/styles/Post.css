@@ -29,13 +29,12 @@
     /* flex-grow: 1; */
     width: 100%;
     gap: 5px;
-}
-
-.post-headings{
     font-size: 11px;
     /* color: var; */
     color: var(--secondary-text);
 }
+
+
 .post-user-name{
     color: var(--normal-text);
     font-size: 15px;

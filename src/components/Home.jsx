@@ -47,7 +47,7 @@ function Home() {
 
   return (
     <div className={`home-panel ${theme}`}>
-      <div className='home-feed-container'>
+      <div className='feed-container'>
         <FeedFilterComponent filterTypes={["For you","Feed"]} selected = {selectedFeed} setSelected ={setSelectedFeed}/>
         <NewPostHomeElement/>
         {isLoading && <h1>Loading...</h1>}

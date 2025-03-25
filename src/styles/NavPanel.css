@@ -46,6 +46,16 @@
 
 }
 
+
+@media (pointer: coarse) {
+    .navigation-buttons:hover {
+      background-color: initial;
+    }
+    .navigation-buttons:active {
+      background-color: var(--hover-item); /* Change effect for touch */
+    }
+  }
+
 .navigation-buttons > i{
     font-size: 25px;
 
