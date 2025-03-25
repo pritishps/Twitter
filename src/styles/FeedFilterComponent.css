@@ -17,6 +17,10 @@
 .filter-type:hover{
     background-color: var(--hover-item);
 }
+/* 
+.filter-type:hover::after{
+    background-color: white;
+} */
 
 .filter-type >p{
     margin-bottom: 0px;
