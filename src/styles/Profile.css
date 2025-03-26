@@ -8,7 +8,7 @@
 
 .profile-banner-container{
     height: 200px;
-    background-image: url("images/profile-image/banner-image.png");
+    background-image: url("./../../public/images/profile-image/banner-image.png");
     background-size: cover; 
     background-position: center;
     overflow: hidden;
