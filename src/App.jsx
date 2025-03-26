@@ -7,6 +7,8 @@ import "./styles/App.css"
 import Explore from "./components/Explore";
 import Notifications from "./components/Notifications";
 import Messages from "./components/Messages";
+import Profile from "./components/Profile";
+import Communities from "./components/Communities";
 
 function App() {
   const theme = useSelector(state=>state.theme);
@@ -20,6 +22,8 @@ function App() {
             <Route path="/explore" element={ <Explore /> } />
             <Route path="/notifications" element={ <Notifications /> } />
             <Route path="/messages" element={<Messages/> } />
+            <Route path="/profile" element={<Profile /> } />
+            <Route path="/communities" element={<Communities /> } />
           </Routes>
         </div>
       </BrowserRouter>

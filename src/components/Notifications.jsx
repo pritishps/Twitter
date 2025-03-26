@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "./../styles/Notifications.css"
+import PageHeadingElement from './PageHeadingElement'
+
 
 function Notifications() {
 
@@ -40,7 +42,8 @@ function Notifications() {
 
   return (
     <div className='feed-container'>
-        <div className='top-notification-heading'>Notifications</div>
+      <PageHeadingElement headingName={"Notifications"} />
+
         {
             feedData.map(notification=>{
                 return(

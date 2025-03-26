@@ -6,9 +6,9 @@ import Post from "./Post";
 function Explore() {
 
     const [searchKeyword,setSearchKeyWord] = useState("")
-    const [trendingFilter,setTrendingFilter] = useState("Trending")
-    const trendingFilterOptions = ["Trending","Sports","Entertainment","News"]
-    const [searchFilter,setSearchFilter] = useState("People")
+    const [exploreFilter,setExploreFilter] = useState("Trending")
+    const exploreFilterOptions = ["Trending","Sports","Entertainment","News"]
+    const [searchFilter,setSearchFilter] = useState("All")
     const [feedData,setFeedData] = useState([])
 
     const searchFilterTypes = ["All","People","Post","Category"];
@@ -25,7 +25,7 @@ function Explore() {
         let allPostData = []
         const fetchData = async () => {
             try {
-              const response = await fetch("/data/allposts.json");
+              const response = await fetch("/data/allPostData.json");
               if (!response.ok) {
                 console.log("Error fetching data");
                 return;
@@ -34,7 +34,7 @@ function Explore() {
             //   console.log(allPostData)
                 if(!searchKeyword){
                 // IF search keyword is not there then show according to trending filters;
-                  allPostData = allPostData.filter(post=>post.category===trendingFilter)
+                  allPostData = allPostData.filter(post=>post.category===exploreFilter)
                   setFeedData(allPostData)
                 }
                 else{
@@ -63,7 +63,7 @@ function Explore() {
 
 
         return ()=>clearTimeout(timeoutSearch)
-    },[searchKeyword,searchFilter,trendingFilter])
+    },[searchKeyword,searchFilter,exploreFilter])
 
   return (
     <div className='feed-container'>
@@ -71,7 +71,7 @@ function Explore() {
             <i className="bi bi-search"></i>
             <input onChange={handleSearch} value={searchKeyword} type="text" name="" id="" placeholder='Search' />
         </div>
-        {!searchKeyword && <FeedFilterComponent filterTypes={trendingFilterOptions} selected={trendingFilter} setSelected={setTrendingFilter}/> }
+        {!searchKeyword && <FeedFilterComponent filterTypes={exploreFilterOptions} selected={exploreFilter} setSelected={setExploreFilter}/> }
 
         {
             searchKeyword && 

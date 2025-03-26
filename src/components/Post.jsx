@@ -3,9 +3,16 @@ import "../styles/Post.css"
 
 function Post({data}) {
   const [liked,setLiked] = useState(data.liked)
+  const [likes,setLikes] = useState(data.likes);
+  // console.log(data.userName,liked)
 
 
   const handleLike = ()=>{
+    if(liked){
+      setLikes(prevLikes=>prevLikes-1)
+    }else{
+      setLikes(prevLikes=>prevLikes+1)
+    }
     setLiked(prevLiked=>!prevLiked)
   }
 
@@ -26,8 +33,9 @@ function Post({data}) {
             <div className='reaction-container'>
               <p className='comment-button'><i className="bi bi-chat"></i>{data.comments}</p>
               <p className='repost-button'><i className="bi bi-repeat"></i>{data.reposts}</p>
-              { !liked && <p onClick={handleLike} className='like-button'><i className="bi bi-heart"></i>{data.likes}</p>}
-              { liked && <p onClick={handleLike} className='liked-button'><i className="bi bi-heart-fill"></i>{data.likes}</p>}
+              { !liked && <p onClick={handleLike} 
+              className='like-button'><i className="bi bi-heart"></i>{likes}</p>}
+              { liked && <p onClick={handleLike} className='liked-button'><i className="bi bi-heart-fill"></i>{likes }</p>}
               <p className='views-button'><i className="bi 
               bi-bar-chart-fill"></i>{data.views}</p>
 

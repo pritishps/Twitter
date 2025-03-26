@@ -1,5 +1,6 @@
 import React, { useEffect,useState } from 'react'
 import "./../styles/Messages.css"
+import PageHeadingElement from './PageHeadingElement'
 
 function Messages() {
 
@@ -36,7 +37,8 @@ function Messages() {
 
   return (
     <div className='feed-container'>
-        <div className='top-messages-heading'>Messages</div>
+        <PageHeadingElement headingName={"Messages"} />
+
         {
             feedData.map(messageData=>{
                 return(

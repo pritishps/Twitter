@@ -1,0 +1,74 @@
+.profile-top-element{
+    color: var(--normal-text);
+    font-size: 20px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--hover-item);
+    padding: 10px 20px;
+}
+
+.profile-banner-container{
+    height: 200px;
+    background-image: url("images/profile-image/banner-image.png");
+    background-size: cover; 
+    background-position: center;
+    overflow: hidden;
+}
+
+.profile-image{
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--body-background);
+    margin: -75px 20px; 
+}
+
+
+
+.profile-details-container {
+    /* background-color: white; */
+    padding: 0 15px;
+}
+
+.user-profile-name{
+    margin: 0px;
+    margin-top: 90px;
+    color: var(--normal-text);
+    font-size: 19px;
+    font-weight: 700;
+    /* background-color: white; */
+}
+
+.profile-user-id{
+    color: var(--secondary-text);
+    font-size: 14px;
+}
+
+.profile-user-bio{
+    margin-top: 10px;
+    color: var(--normal-text);
+    font-size: 14px;
+}
+
+.joining-info{
+    margin-top: 20px;
+    color: var(--secondary-text);
+    font-size: 14px;
+}
+
+.follow-info-container{
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.follow-info-container > p{
+    font-size: 14px;
+    color: var(--secondary-text);
+}
+
+.follow-info-container > p > span{
+    color: var(--normal-text);
+    font-weight: 600;
+}

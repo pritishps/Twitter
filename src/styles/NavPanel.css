@@ -97,6 +97,7 @@
 
 /* PROFILE INFO CONTAINER */
 .profile-info-display-container{
+    text-decoration: none;
     display: flex;
     width: 240px;
     margin: 10px auto;

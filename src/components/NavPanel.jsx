@@ -51,14 +51,14 @@ function NavPanel() {
             <span className='feather-logo'><i className="bi bi-feather"></i></span>
           </button>
         </div>
-        <div className={`profile-info-display-container`}>
+        <NavLink className={`profile-info-display-container`} to={"/profile"}>
             <img className={`loggedin-user-profile-image`} src="images/profile-image/loggedin-user.png" alt="profile image" />
             <div className={`loggedin-user-account-headings`}>
                 <h2>Pritish Prasant Sahoo</h2>
                 <p>@pritishps</p>
             </div>
             <div className={`navigation-container-top-menu-option`}>...</div>
-        </div>
+        </NavLink>
 
       </div>
 
