@@ -20,7 +20,8 @@ const Post=memo(({data})=>{
   return (
     <div className={`post-container`}>
         <div className='post-image-container'>
-            <img src="images/profile-image/loggedin-user.png" alt="user-image" />
+            <img src={data.url} alt="user-image" />
+
         </div>
         <div className={`post-content`}>
             <div className={`post-headings`}>
@@ -32,9 +33,9 @@ const Post=memo(({data})=>{
                 </div>
             </div>
             <p className={`post-text`}>{data.postText}
-              {/* { true && */}
-                <img className='post-image' src="images/profile-image/banner-image.png" alt="" />
-              {/* } */}
+              { data.postImageUrl &&
+                <img className='post-image' src={data.postImageUrl} alt="" />
+              }
             </p>
             <div className='reaction-container'>
               <p className='comment-button'><i className="bi bi-chat"></i>{data.comments}</p>

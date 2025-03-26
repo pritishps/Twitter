@@ -45,7 +45,7 @@ const Profile=memo(()=>{
             </div>
         </div>
         
-      <Feed feedfilters={feedfilters} filterKey={filterKey} filterCriteria ={filterCriteria} url={"data/allposts.json"}/>
+      <Feed feedfilters={feedfilters} filterKey={filterKey} filterCriteria ={filterCriteria} url={"data/allPostData.json"}/>
 
     </div>
   )

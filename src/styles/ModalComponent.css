@@ -17,9 +17,9 @@
     background: var(--body-background);
     /* padding: 20px; */
     width: 600px;
-    border-radius: 10px;
+    border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    text-align: center;
+    /* text-align: center; */
   }
   
   .close-btn {
@@ -29,7 +29,7 @@
     margin: 5px;
     padding: 8px 5px;
 
-    color: white;
+    color: var(--normal-text);
     border: none;
     cursor: pointer;
     /* text-align: left; */

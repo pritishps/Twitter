@@ -41,7 +41,7 @@ const Messages=memo(()=> {
             feedData.map(messageData=>{
                 return(
                     <div className='message-container' key={messageData.messageId}>
-                        <img src="images/profile-image/loggedin-user.png" alt="user-profile-image" />
+                        <img src={messageData.userImageUrl} alt="user-profile-image" />
                         <div className='message-content'>
                             <div className='message-headings'>
                                 <h1>{messageData.userName}</h1>
