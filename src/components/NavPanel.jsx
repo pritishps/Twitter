@@ -1,9 +1,10 @@
 import React, { memo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import "../styles/NavPanel.css"
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 
 const NavPanel = memo(()=>{
+  const navigate = useNavigate();
   const theme = useSelector(state=>state.theme);
   const dispatch = useDispatch();
 
@@ -77,12 +78,10 @@ const NavPanel = memo(()=>{
 
       </div>
 
-
-
       {/* Mobile View */}
       {/* TOP Navigation panel */}
       <div className='mobile-nav-top-panel'>
-          <img className={`loggedin-user-profile-image`} src="images/profile-image/loggedin-user.png" alt="profile image" />
+          <img onClick={()=>navigate("/profile")} className={`loggedin-user-profile-image`} src="images/profile-image/loggedin-user.png" alt="profile image" />
           <div>
             <NavLink to={"/"} className={`x-logo-top x-logo-top-mobile`}  > <img src={`images/logo${theme}.png`} alt="x.com logo" /> </NavLink>
           </div>

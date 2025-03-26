@@ -46,7 +46,7 @@ const Explore=memo(()=> {
                     }else if(searchFilter === "Post"){
                       return post.postText.toLowerCase().includes(searchKeyword.toLowerCase());
                     }else if(searchFilter==="Category"){
-                      return post.category.toLowerCase()===searchFilter.toLowerCase()
+                      return post.category.toLowerCase()===searchKeyword.toLowerCase()
                     }
                   })
                   setFeedData(allPostData)
