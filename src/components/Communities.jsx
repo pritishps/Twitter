@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { memo } from 'react'
 import PageHeadingElement from './PageHeadingElement'
 import Feed from './Feed'
 
 
-function Communities() {
+const Communities=memo(()=> {
 
 
   const feedfilters=["Music","Sports","Science","News"]
@@ -29,6 +29,6 @@ function Communities() {
       
     </div>
   )
-}
+})
 
 export default Communities

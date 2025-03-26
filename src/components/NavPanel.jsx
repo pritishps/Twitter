@@ -1,10 +1,17 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
+import React, { memo } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import "../styles/NavPanel.css"
 import { NavLink } from 'react-router-dom';
 
-function NavPanel() {
+const NavPanel = memo(()=>{
   const theme = useSelector(state=>state.theme);
+  const dispatch = useDispatch();
+
+  const toggleTheme = ()=>{
+    dispatch({
+      type:"SWITCH_THEME"
+    })
+  }
 
   return (
     
@@ -46,6 +53,14 @@ function NavPanel() {
             <i className="bi bi-person"><span>Profile</span> </i>
             </NavLink>
           </div>
+          <div>
+            <NavLink className={`navigation-buttons`} onClick={toggleTheme}>
+              {
+                theme!="dark" ? <i className="bi bi-moon-stars"><span>Dark Mode</span></i>
+                : <i className="bi bi-brightness-high"><span>Light Mode</span></i>
+              }
+            </NavLink>
+          </div>
           <button className={`post-button ${theme}`}>
             <span className='full-screen-post-text'>Post</span>
             <span className='feather-logo'><i className="bi bi-feather"></i></span>
@@ -71,7 +86,12 @@ function NavPanel() {
           <div>
             <NavLink to={"/"} className={`x-logo-top x-logo-top-mobile`}  > <img src={`images/logo${theme}.png`} alt="x.com logo" /> </NavLink>
           </div>
-          <div className={`navigation-container-top-menu-option mobile-triple-dot`}>...</div>
+          <div className={`navigation-container-top-menu-option mobile-triple-dot`}>
+              {
+                theme!="dark" ? <i onClick={toggleTheme} className="bi bi-moon-stars"></i>
+                : <i onClick={toggleTheme} className="bi bi-brightness-high"></i>
+              }
+          </div>
       </div>
 
       {/* Buttom Navigation panel */}
@@ -106,6 +126,6 @@ function NavPanel() {
       </div>
     </>
   )
-}
+})
 
 export default NavPanel

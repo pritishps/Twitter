@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { memo } from 'react'
 import "./../styles/Profile.css"
-import FeedFilterComponent from './FeedFilterComponent'
-import Post from './Post'
 import Feed from './Feed'
 
 
-function Profile() {
+const Profile=memo(()=>{
 
     const feedfilters=["Post","Likes"]
 
@@ -51,6 +49,6 @@ function Profile() {
 
     </div>
   )
-}
+})
 
 export default Profile

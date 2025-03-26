@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import "./../styles/Explore.css"
 import FeedFilterComponent from './FeedFilterComponent'
 import Post from "./Post";
 
-function Explore() {
+const Explore=memo(()=> {
 
     const [searchKeyword,setSearchKeyWord] = useState("")
     const [exploreFilter,setExploreFilter] = useState("Trending")
@@ -86,6 +86,6 @@ function Explore() {
         })}
     </div>
   )
-}
+})
 
 export default Explore

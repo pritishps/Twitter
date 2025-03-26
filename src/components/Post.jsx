@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React, { memo, useState } from 'react'
 import "../styles/Post.css"
 
-function Post({data}) {
+const Post=memo(({data})=>{
   const [liked,setLiked] = useState(data.liked)
   const [likes,setLikes] = useState(data.likes);
   // console.log(data.userName,liked)
@@ -43,6 +43,6 @@ function Post({data}) {
         </div>
     </div>
   )
-}
+})
 
 export default Post

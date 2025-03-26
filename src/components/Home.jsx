@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React, { memo } from 'react'
 import { useSelector } from 'react-redux';
 import "../styles/Home.css";
 import NewPostHomeElement from './NewPostHomeElement';
 import Feed from './Feed';
 
-function Home() {
+const Home=memo(()=>{
 
   const theme = useSelector(state=>state.theme);
 
@@ -33,6 +33,6 @@ function Home() {
     </div>
 
   )
-}
+})
 
 export default Home

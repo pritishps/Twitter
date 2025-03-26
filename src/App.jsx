@@ -10,7 +10,7 @@ import Messages from "./components/Messages";
 import Profile from "./components/Profile";
 import Communities from "./components/Communities";
 
-function App() {
+const App =()=> {
   const theme = useSelector(state=>state.theme);
   return (
     <div className={"app-container " +theme}>

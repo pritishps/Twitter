@@ -1,8 +1,8 @@
-import React, { useRef } from 'react'
+import React, { memo, useRef } from 'react'
 import "./../styles/NewPostHomeElement.css"
 
 
-function NewPostHomeElement() {
+const NewPostHomeElement=memo(()=>{
 
   const postRef = useRef();
 
@@ -27,6 +27,6 @@ function NewPostHomeElement() {
       </div>
     </div>
   )
-}
+})
 
 export default NewPostHomeElement

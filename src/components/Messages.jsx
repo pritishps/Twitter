@@ -1,8 +1,8 @@
-import React, { useEffect,useState } from 'react'
+import React, { memo, useEffect,useState } from 'react'
 import "./../styles/Messages.css"
 import PageHeadingElement from './PageHeadingElement'
 
-function Messages() {
+const Messages=memo(()=> {
 
     const [feedData,setFeedData] = useState([])
     
@@ -59,6 +59,6 @@ function Messages() {
         }
     </div>
   )
-}
+})
 
 export default Messages

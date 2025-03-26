@@ -148,6 +148,12 @@
     font-weight: 800;
 }
 
+.navigation-container-top-menu-option > i{
+    margin-right: 25px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
 @media (max-width: 1024px) {
     .full-screen-side-nav-panel{
         width: 90px;

@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { memo } from 'react'
 import "./../styles/FeedFilterComponent.css"
 
-function FeedFilterComponent({filterTypes,selected,setSelected}) {
+const FeedFilterComponent =memo(({filterTypes,selected,setSelected})=>{
 
     const handleFilterSelect = (filter)=>{
         setSelected(filter)
@@ -18,6 +18,6 @@ function FeedFilterComponent({filterTypes,selected,setSelected}) {
         }
     </div>
   )
-}
+})
 
 export default FeedFilterComponent

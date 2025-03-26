@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import "./../styles/Notifications.css"
 import PageHeadingElement from './PageHeadingElement'
 
 
-function Notifications() {
+const Notifications =memo(()=> {
 
     const [feedData,setFeedData] = useState([])
 
@@ -57,6 +57,6 @@ function Notifications() {
         
     </div>
   )
-}
+})
 
 export default Notifications

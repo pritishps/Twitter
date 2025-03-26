@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { memo, useEffect, useState } from 'react'
 import FeedFilterComponent from './FeedFilterComponent';
 import Post from './Post';
 import "./../styles/Feed.css"
 
-function Feed(post) {
+const Feed =memo((post)=> {
 
     // POST DETAILS: 
     const {feedfilters,filterKey,filterCriteria,url} = post
@@ -55,6 +55,6 @@ function Feed(post) {
         })}
     </div>
   )
-}
+})
 
 export default Feed
