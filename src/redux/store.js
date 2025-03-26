@@ -1,7 +1,6 @@
 import {createStore} from 'redux';
 
 const initialState = {
-    // theme:"",
     theme:"dark",
 
 }
@@ -11,7 +10,6 @@ const reducers  = (state = initialState,action)=>{
         case "SWITCH_THEME":
             if (state?.theme==="") return {...state,theme:"dark"};
             return {...state,theme:""};
-        
         
         default : return state
     }

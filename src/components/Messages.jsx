@@ -17,7 +17,6 @@ const Messages=memo(()=> {
             }
             const newData = await response.json();
             if (JSON.stringify(newData) !== JSON.stringify(feedData)) {
-                console.log("Feed data has changed");
                 setFeedData(newData);
             }
             } catch (err) {
@@ -33,7 +32,6 @@ const Messages=memo(()=> {
         };
     },[feedData])
 
-    console.log(feedData)
 
   return (
     <div className='feed-container'>

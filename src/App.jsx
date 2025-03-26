@@ -9,6 +9,7 @@ import Notifications from "./components/Notifications";
 import Messages from "./components/Messages";
 import Profile from "./components/Profile";
 import Communities from "./components/Communities";
+import NewPostHomeElement from "./components/NewPostHomeElement";
 
 const App =()=> {
   const theme = useSelector(state=>state.theme);
@@ -24,6 +25,7 @@ const App =()=> {
             <Route path="/messages" element={<Messages/> } />
             <Route path="/profile" element={<Profile /> } />
             <Route path="/communities" element={<Communities /> } />
+            <Route path="/post" element={<NewPostHomeElement /> } />
           </Routes>
         </div>
       </BrowserRouter>

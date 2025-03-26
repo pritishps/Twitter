@@ -117,6 +117,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 .loggedin-user-account-headings {
@@ -214,6 +215,7 @@
     background-color: var(--body-background);
     align-items: center;
     justify-content: space-between;
+    box-shadow: 0 4px 10px var(--body-background);
 }
 
 .x-logo-top-mobile{
@@ -221,6 +223,31 @@
     flex: 1;
     text-align: center;
 }
+
+
+.new-post-mobile-button{
+    display: none;
+    text-decoration: none;
+    position: fixed;
+    bottom: 70px;
+    /* left: 100px; */
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--highlight);
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    color: var(--normal-text);
+    box-shadow: 0px 0px 5px var(--body-background);
+}
+
+/* .new-post-mobile-button > i{
+    display: block;
+} */
+
 
 .mobile-nav-bottom-panel{
     display: none;
@@ -251,5 +278,8 @@
     }
     .navigation-buttons{
         padding: 5px 13px;
+    }
+    .new-post-mobile-button{
+        display: flex;
     }
 }

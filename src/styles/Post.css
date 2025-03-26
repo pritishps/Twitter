@@ -34,6 +34,13 @@
     color: var(--secondary-text);
 }
 
+.post-headings > div{
+    flex: 1;
+    display: flex;
+    justify-content: end;
+    gap: 5px;
+}
+
 
 .post-user-name{
     color: var(--normal-text);
@@ -92,4 +99,11 @@
 }
 .liked-button>i{
     color: #c21465;
+}
+
+.post-image{
+    display: block;
+    margin-top:2px;
+    width: 100%;
+    border-radius: 12px;
 }

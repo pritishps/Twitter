@@ -18,11 +18,8 @@ const Notifications =memo(()=> {
               return;
             }
             const newData = await response.json();
-            // console.log(newData)
             if (JSON.stringify(newData) !== JSON.stringify(feedData)) {
-              console.log("Feed data has changed");
               setFeedData(newData);
-            //   setIsLoading(false)
             }
           } catch (err) {
             console.log("Error:", err);
@@ -38,7 +35,6 @@ const Notifications =memo(()=> {
     
       },[feedData])
 
-    //   console.log(feedData)
 
   return (
     <div className='feed-container'>
@@ -48,7 +44,7 @@ const Notifications =memo(()=> {
             feedData.map(notification=>{
                 return(
                     <div className='notification-container' key={notification.notificationId}>
-                        <img src="images/logodark.png" alt="user-image" />
+                        <img src="images/notification-x-logo.png" alt="user-image" />
                         <p>{notification.notificationContent}</p>
                     </div>
                 )

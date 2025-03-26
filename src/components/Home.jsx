@@ -25,8 +25,9 @@ const Home=memo(()=>{
   return (
     <div className={`home-panel ${theme}`}>
       <div className='feed-container'>
+      <Feed feedfilters={feedfilters} filterKey={filterKey} filterCriteria ={filterCriteria} url={"data/allPostData.json"}>
         <NewPostHomeElement/>
-      <Feed feedfilters={feedfilters} filterKey={filterKey} filterCriteria ={filterCriteria} url={"data/allPostData.json"}/>
+      </Feed>
         
 
       </div>

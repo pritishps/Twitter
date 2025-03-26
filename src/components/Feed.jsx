@@ -3,11 +3,12 @@ import FeedFilterComponent from './FeedFilterComponent';
 import Post from './Post';
 import "./../styles/Feed.css"
 
-const Feed =memo((post)=> {
+const Feed =memo((props)=> {
 
-    // POST DETAILS: 
-    const {feedfilters,filterKey,filterCriteria,url} = post
+    const {feedfilters,filterKey,filterCriteria,url} = props
 
+    const [isLoading,setIsLoading] = useState(true);
+    const [isError,setIsError] = useState(false);
     const [selectedFeed,setSelectedFeed] = useState(feedfilters[0]);
       const [feedData,setFeedData] = useState([])
     
@@ -26,13 +27,13 @@ const Feed =memo((post)=> {
                 dataItem[filterKey[selectedFeed]] === filterCriteria[selectedFeed]
             )
         })
+        await setIsLoading(false);
         if (JSON.stringify(newData) !== JSON.stringify(feedData)) {
-            console.log("Feed data has changed");
-            
             setFeedData(newData);
         }
         } catch (err) {
-        console.log("Error:", err);
+            setIsError(err.message);
+            setIsLoading(false)
         }
     };
 
@@ -48,11 +49,19 @@ const Feed =memo((post)=> {
   return (
     <div className='feed-container-component'>
         <FeedFilterComponent filterTypes={feedfilters} selected={selectedFeed} setSelected={setSelectedFeed} />
-        {feedData.map(postData=>{
-            return(
-                <Post key={postData.postId} data={postData}/>
-            )
-        })}
+        {props.children}
+        {isLoading && <h1 className='loader'></h1>}
+        {isError && <h1>{isError}</h1>}
+        {!isLoading && !isError &&
+            feedData.map(postData=>{
+                return(
+                    <Post key={postData.postId} data={postData}/>
+                )
+            })
+        }
+        {!isLoading && !isError && feedData.length===0 &&
+            <h1 className='no-post-message' >No posts yet</h1>
+        }
     </div>
   )
 })

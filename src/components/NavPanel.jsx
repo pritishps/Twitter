@@ -1,11 +1,15 @@
-import React, { memo } from 'react'
+import React, { memo, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import "../styles/NavPanel.css"
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import ModalComponent from './ModelComponent';
+import NewPostHomeElement from './NewPostHomeElement';
 
 const NavPanel = memo(()=>{
   const navigate = useNavigate();
   const theme = useSelector(state=>state.theme);
+  const [newPostContainer,setNewPostContainer] = useState(false);
+
   const dispatch = useDispatch();
 
   const toggleTheme = ()=>{
@@ -13,6 +17,10 @@ const NavPanel = memo(()=>{
       type:"SWITCH_THEME"
     })
   }
+
+  const location  = useLocation();
+
+  
 
   return (
     
@@ -26,32 +34,32 @@ const NavPanel = memo(()=>{
           </div>
           <div>
             <NavLink  className={`navigation-buttons`} to={'/'} >
-            <i className="bi bi-house-door-fill"><span>Home</span></i>
+             <i className={location.pathname==="/" ? 'bi bi-house-door-fill' : "bi bi-house-door"}><span>Home</span></i> 
             </NavLink>
           </div>
           <div>
             <NavLink  className={`navigation-buttons`} to={'/explore'} >
-            <i className="bi bi-search"><span>Explore</span></i>
+            <i className={location.pathname==="/explore"?  "bi bi-search-heart-fill" : "bi bi-search"}><span>Explore</span></i>
             </NavLink>  
           </div>
           <div>
             <NavLink  className={`navigation-buttons`} to={'/notifications'} >
-            <i className="bi bi-bell"><span>Notifications</span> </i>
+            <i className={location.pathname==="/notifications"? 'bi bi-bell-fill' : "bi bi-bell"}><span>Notifications</span> </i>
             </NavLink>
           </div>
           <div>
             <NavLink  className={`navigation-buttons`} to={'/messages'} >
-            <i className="bi bi-envelope"><span>Messages</span> </i>
+            <i className={location.pathname==="/messages" ? "bi bi-envelope-fill":"bi bi-envelope"}><span>Messages</span> </i>
             </NavLink>
           </div>
           <div>
             <NavLink  className={`navigation-buttons`} to={'/communities'} >
-            <i className="bi bi-people"><span>Communities</span> </i>
+            <i className={location.pathname==="/communities" ? "bi bi-people-fill":"bi bi-people"}><span>Communities</span> </i>
             </NavLink>
           </div>
           <div>
             <NavLink  className={`navigation-buttons`} to={'/profile'} >
-            <i className="bi bi-person"><span>Profile</span> </i>
+            <i className={location.pathname==="/profile" ? "bi bi-person-fill":"bi bi-person"}><span>Profile</span> </i>
             </NavLink>
           </div>
           <div>
@@ -62,7 +70,7 @@ const NavPanel = memo(()=>{
               }
             </NavLink>
           </div>
-          <button className={`post-button ${theme}`}>
+          <button onClick={()=>setNewPostContainer(true)} className={`post-button ${theme}`}>
             <span className='full-screen-post-text'>Post</span>
             <span className='feather-logo'><i className="bi bi-feather"></i></span>
           </button>
@@ -93,36 +101,57 @@ const NavPanel = memo(()=>{
           </div>
       </div>
 
+
+      {/* New Post Hovering Button */}
+
+      <NavLink to={"/post"} className='new-post-mobile-button'><i className="bi bi-feather"></i></NavLink>
+      
+
       {/* Buttom Navigation panel */}
 
       <div  className='mobile-nav-bottom-panel'>
           <div>
             <NavLink  className={`navigation-buttons`} to={'/'} >
-            <i className="bi bi-house-door-fill"></i>
+            <i className={location.pathname==="/" ? 'bi bi-house-door-fill' : "bi bi-house-door"}></i> 
             </NavLink>
           </div>
           <div>
             <NavLink  className={`navigation-buttons`} to={'/explore'} >
-            <i className="bi bi-search"></i>
+            <i className={location.pathname==="/explore"?  "bi bi-search-heart-fill" : "bi bi-search"}></i>
             </NavLink>  
           </div>
           <div>
             <NavLink  className={`navigation-buttons`} to={'/notifications'} >
-            <i className="bi bi-bell"></i>
+            <i className={location.pathname==="/notifications"? 'bi bi-bell-fill' : "bi bi-bell"}></i>
             </NavLink>
           </div>
           <div>
             <NavLink  className={`navigation-buttons`} to={'/messages'} >
-            <i className="bi bi-envelope"></i>
+            <i className={location.pathname==="/messages" ? "bi bi-envelope-fill":"bi bi-envelope"}></i>
             </NavLink>
           </div>
           <div>
             <NavLink  className={`navigation-buttons`} to={'/communities'} >
-            <i className="bi bi-people"></i>
+            <i className={location.pathname==="/communities" ? "bi bi-people-fill":"bi bi-people"}></i>
             </NavLink>
           </div>
           
       </div>
+
+
+
+
+
+
+
+      {/* NEW POST SCREEN */}
+      { newPostContainer &&
+        <ModalComponent onClose={() => setNewPostContainer(false)}>
+        <NewPostHomeElement />
+      </ModalComponent>
+      }
+
+
     </>
   )
 })
