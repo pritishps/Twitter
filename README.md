@@ -162,8 +162,8 @@ This project is a minimal frontend-only clone of X.com designed to simulate a re
 ## Refferences
 
 To build this application the following refferences and components are taken 
--X.com : https://x.com/home  For UI Refferences
--Bootstrap : https://getbootstrap.com/     For CSS libraries
--Bootstrap Icons : https://getbootstrap.com/    For Icons
--React : https://react.dev/     For project structure
--React Redux : https://react-redux.js.org/      For redux state management
+- X.com : https://x.com/home  For UI Refferences
+- Bootstrap : https://getbootstrap.com/     For CSS libraries
+- Bootstrap Icons : https://getbootstrap.com/    For Icons
+- React : https://react.dev/     For React Library
+- React Redux : https://react-redux.js.org/      For redux state management
