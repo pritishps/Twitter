@@ -6,6 +6,9 @@ const Messages=memo(()=> {
 
     const [feedData,setFeedData] = useState([])
     
+    const [isLoading,setIsLoading] = useState(true);
+    const [isError,setIsError] = useState(false);
+    
     useEffect(()=>{
 
         const fetchData = async () => {
@@ -16,11 +19,13 @@ const Messages=memo(()=> {
                 return;
             }
             const newData = await response.json();
+            await setIsLoading(false);
             if (JSON.stringify(newData) !== JSON.stringify(feedData)) {
                 setFeedData(newData);
             }
             } catch (err) {
-            console.log("Error:", err);
+                setIsError(err.message);
+                setIsLoading(false)
             }
         };
 
@@ -36,8 +41,9 @@ const Messages=memo(()=> {
   return (
     <div className='feed-container'>
         <PageHeadingElement headingName={"Messages"} />
-
-        {
+        {isLoading && <h1 className='loader'></h1>}
+        {isError && <h1>{isError}</h1>}
+        {!isLoading && !isError &&
             feedData.map(messageData=>{
                 return(
                     <div className='message-container' key={messageData.messageId}>

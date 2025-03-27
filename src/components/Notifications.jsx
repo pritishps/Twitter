@@ -7,6 +7,9 @@ const Notifications =memo(()=> {
 
     const [feedData,setFeedData] = useState([])
 
+    const [isLoading,setIsLoading] = useState(true);
+    const [isError,setIsError] = useState(false);
+
       useEffect(()=>{
     
         const fetchData = async () => {
@@ -18,11 +21,14 @@ const Notifications =memo(()=> {
               return;
             }
             const newData = await response.json();
+            await setIsLoading(false);
+
             if (JSON.stringify(newData) !== JSON.stringify(feedData)) {
               setFeedData(newData);
             }
           } catch (err) {
-            console.log("Error:", err);
+            setIsError(err.message);
+            setIsLoading(false)
           }
         };
     
@@ -39,8 +45,9 @@ const Notifications =memo(()=> {
   return (
     <div className='feed-container'>
       <PageHeadingElement headingName={"Notifications"} />
-
-        {
+      {isLoading && <h1 className='loader'></h1>}
+      {isError && <h1>{isError}</h1>}
+        { !isLoading && !isError &&
             feedData.map(notification=>{
                 return(
                     <div className='notification-container' key={notification.notificationId}>
