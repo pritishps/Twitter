@@ -2,7 +2,7 @@ import React, { memo, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import "../styles/NavPanel.css"
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
-import ModalComponent from './ModelComponent';
+import ModalComponent from './ModalComponent';
 import NewPostHomeElement from './NewPostHomeElement';
 
 const NavPanel = memo(()=>{
