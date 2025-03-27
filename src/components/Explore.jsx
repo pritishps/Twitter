@@ -10,6 +10,9 @@ const Explore=memo(()=> {
     const exploreFilterOptions = ["Trending","Sports","Entertainment","News"]
     const [searchFilter,setSearchFilter] = useState("All")
     const [feedData,setFeedData] = useState([])
+    
+    const [isLoading,setIsLoading] = useState(true);
+    const [isError,setIsError] = useState(false);
 
     const searchFilterTypes = ["All","People","Post","Category"];
 
@@ -31,6 +34,8 @@ const Explore=memo(()=> {
                 return;
               }
               allPostData = await response.json();
+              await setIsLoading(false);
+
             //   console.log(allPostData)
                 if(!searchKeyword){
                 // IF search keyword is not there then show according to trending filters;
@@ -52,7 +57,8 @@ const Explore=memo(()=> {
                   setFeedData(allPostData)
                 }
             } catch (err) {
-              console.log("Error:", err);
+              setIsError(err.message);
+              setIsLoading(false)
             }
           };
 
@@ -72,14 +78,18 @@ const Explore=memo(()=> {
             <input onChange={handleSearch} value={searchKeyword} type="text" name="" id="" placeholder='Search' />
         </div>
         {!searchKeyword && <FeedFilterComponent filterTypes={exploreFilterOptions} selected={exploreFilter} setSelected={setExploreFilter}/> }
+        {isLoading && <h1 className='loader'></h1>}
+        {isError && <h1>{isError}</h1>}
 
         {
+          !isLoading && !isError &&
             searchKeyword && 
             <FeedFilterComponent filterTypes={searchFilterTypes}
             selected={searchFilter} setSelected={setSearchFilter}/>
         }
 
-        {feedData.map(postData=>{
+        { !isLoading && !isError &&
+          feedData.map(postData=>{
             return(
                 <Post key={postData.postId} data={postData}/>
             )
