@@ -33,7 +33,8 @@ const App =()=> {
             <Route path="/*" element={<WildCard /> } />
           </Routes>
           {/* FOLLOW SUGGESTIONS FOR FULL SCREEN SIZE DISPLAY */}
-        <FollowSuggestion/>
+          {/* CAUSING SOME RESPONSIVENESS ISSUE */}
+        {/* <FollowSuggestion/> */}
         </div>
       </BrowserRouter>
     </div>
