@@ -1,3 +1,5 @@
+/* FULL NAV PANEL */
+
 .full-screen-side-nav-panel{
     width:280px;
     color: var(--normal-text);
@@ -46,7 +48,7 @@
 
 }
 
-
+/* HANDLE CLICKS IN MOBILE */
 @media (pointer: coarse) {
     .navigation-buttons:hover {
       background-color: initial;
@@ -155,10 +157,7 @@
     cursor: pointer;
 }
 
-/* 
-@media (max-width: 1200px) {
-
-} */
+/* RESPONSIVE NESS */
 @media (max-width: 1200px) {
     .full-screen-side-nav-panel{
         width: 90px;
@@ -194,7 +193,7 @@
 }
 
 
-
+/* MOBILE COMPONENTS */
 /* Mobile Nav Bar Design */
  .mobile-nav-bar-panel{
     display: none;
@@ -247,9 +246,6 @@
     box-shadow: 0px 0px 5px var(--body-background);
 }
 
-/* .new-post-mobile-button > i{
-    display: block;
-} */
 
 
 .mobile-nav-bottom-panel{

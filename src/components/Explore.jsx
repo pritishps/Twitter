@@ -5,16 +5,17 @@ import Post from "./Post";
 
 const Explore=memo(()=> {
 
-    const [searchKeyword,setSearchKeyWord] = useState("")
-    const [exploreFilter,setExploreFilter] = useState("Trending")
-    const exploreFilterOptions = ["Trending","Sports","Entertainment","News"]
-    const [searchFilter,setSearchFilter] = useState("All")
+    const [searchKeyword,setSearchKeyWord] = useState("") //INITIALLY THERE IS NO SEARCH KEYWORD
+    const [exploreFilter,setExploreFilter] = useState("Trending") //INITIALLY DISPLAY THE TRENDING PAGES
+    const exploreFilterOptions = ["Trending","Sports","Entertainment","News"]  //ALL THE TYPES OF FILTERS APPLIED WHILE SHOWIG EXPLORE PAGES
+    const [searchFilter,setSearchFilter] = useState("All") //INITIAL SEARCH RESULT WILL DISPLAY RESULT FOR ALL TYPES MATCHING THE KEYWORD
+    const searchFilterTypes = ["All","People","Post","Category"]; //ALL THE TYPES OF FILTERS APPLIED WHILE SHOWING SEARCH RESULTS
     const [feedData,setFeedData] = useState([])
     
+    // HANDLING LOADING AND ERROR
     const [isLoading,setIsLoading] = useState(true);
     const [isError,setIsError] = useState(false);
 
-    const searchFilterTypes = ["All","People","Post","Category"];
 
 
     const handleSearch = (e)=>{
@@ -25,7 +26,8 @@ const Explore=memo(()=> {
 
     useEffect(()=>{
 
-        let allPostData = []
+      // DEFINING  THE FETCH DATA FOR BOTH EXPLORE FEED AND SEARCH DATA
+
         const fetchData = async () => {
             try {
               const response = await fetch("/data/allPostData.json");
@@ -33,16 +35,15 @@ const Explore=memo(()=> {
                 console.log("Error fetching data");
                 return;
               }
-              allPostData = await response.json();
+              let allPostData = await response.json();
               await setIsLoading(false);
 
-            //   console.log(allPostData)
                 if(!searchKeyword){
-                // IF search keyword is not there then show according to trending filters;
+                // IF search keyword is not there then show according to EXPLORE filters;
                   allPostData = allPostData.filter(post=>post.category===exploreFilter)
                   setFeedData(allPostData)
                 }
-                else{
+                else{ //IF SEARCH KEYWORD IS THERE THE SEARCH ACORDING TO THE SEARCH FILTER
                   allPostData = allPostData.filter(post=>{
                     if(searchFilter==="All"){
                       return JSON.stringify(post).toLowerCase().includes(searchKeyword.toLowerCase())
@@ -62,28 +63,31 @@ const Explore=memo(()=> {
             }
           };
 
-          fetchData();
-        const timeoutSearch = setTimeout(()=>{
+          fetchData(); //THIS IS CALLED AT THE FIRST RERENDER TO IMMIDIATELY LOAD THE DATA
+        const timeoutSearch = setTimeout(()=>{  //DEBOUNCE SEARCHING IMPLEMENTATION
             fetchData();
         }, 3000);
+        
 
-
-        return ()=>clearTimeout(timeoutSearch)
+        return ()=>clearTimeout(timeoutSearch) //TO CLEAR THE TIMEOUT AFTER COMPONENT UNMOUNTING
     },[searchKeyword,searchFilter,exploreFilter])
 
   return (
     <div className='feed-container'>
+      {/* SEARCH BAR COMPONENT */}
         <div className='search-container'>
             <i className="bi bi-search"></i>
             <input onChange={handleSearch} value={searchKeyword} type="text" name="" id="" placeholder='Search' />
         </div>
+
         {!searchKeyword && <FeedFilterComponent filterTypes={exploreFilterOptions} selected={exploreFilter} setSelected={setExploreFilter}/> }
+        
         {isLoading && <h1 className='loader'></h1>}
         {isError && <h1>{isError}</h1>}
 
         {
           !isLoading && !isError &&
-            searchKeyword && 
+            searchKeyword &&  //IF SEARCHKEYWORD IS THERE THE FILTERTYPES CHAGE TO SEARCH FILTERS
             <FeedFilterComponent filterTypes={searchFilterTypes}
             selected={searchFilter} setSelected={setSearchFilter}/>
         }

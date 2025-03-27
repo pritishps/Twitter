@@ -8,7 +8,8 @@
 
 .profile-banner-container{
     height: 200px;
-    background-image: url("./../../public/images/profile-image/banner-image.png");
+    /* PROVIDING LOCATION WRT TO PUBLIC FOLDER CAUSING ISSUE IN LOADING DURING DEPLOYMENT */
+    background-image: url("./../../public/images/profile-image/banner-image.png"); 
     background-size: cover; 
     background-position: center;
     overflow: hidden;
@@ -26,7 +27,6 @@
 
 
 .profile-details-container {
-    /* background-color: white; */
     padding: 0 15px;
 }
 
@@ -36,7 +36,6 @@
     color: var(--normal-text);
     font-size: 19px;
     font-weight: 700;
-    /* background-color: white; */
 }
 
 .profile-user-id{

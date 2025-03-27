@@ -1,7 +1,6 @@
+/* CONTAINS STYLING FOR BOTH FOLLOW SUGGESTION AND UserCards */
 .follow-suggestion{
     display: block;
-    /* flex: 1; */
-    /* border: 1px solid white; */
     box-shadow: 0px 0px 5px var(--normal-text);
     min-width: 300px;
     height: fit-content;
@@ -74,6 +73,7 @@
     padding: 10px 20px;
     border-radius:50px ;
     color: var(--body-background);
+    border: none;
 }
 
 .follow-button:hover{

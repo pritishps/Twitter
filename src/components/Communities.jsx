@@ -2,6 +2,7 @@ import React, { memo } from 'react'
 import PageHeadingElement from './PageHeadingElement'
 import Feed from './Feed'
 
+// COMMUNITIES COMPONENT
 
 const Communities=memo(()=> {
 

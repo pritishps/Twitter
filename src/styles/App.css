@@ -1,3 +1,4 @@
+/* MAIN APP CONTAINER STYLE */
 .app-container{
     background-color: var(--body-background);
     height: 100vh;
@@ -5,6 +6,8 @@
     justify-content: center;
 }
 
+
+/* CSS FOR ALL THE ROUTES PAGES */
 .main-app-content{
     display: flex;
     width: 100%;
@@ -18,27 +21,27 @@
   }
 }
 
-  @media (max-width:498px){
-  
-    .main-app-content{
-      margin-top: 65px;
-      flex: 1;
-    }
+@media (max-width:498px){
+
+  .main-app-content{
+    margin-top: 65px;
+    flex: 1;
   }
+}
 
 
+/* FOR ALL THE FEEDS / ROUTES*/
 
-  .feed-container{
-    /* border: 1px solid var(--normal-text); */
-    border-left: 1px solid var(--hover-item);
-    border-right: 1px solid var(--hover-item);
-    min-width: 400px;
-    max-width: 600px;
-    height: 100vh;
-    /* overflow: scroll; */
-    overflow-y: scroll;
-    scrollbar-width: none;
-    scroll-behavior:smooth;
+.feed-container{
+  border-left: 1px solid var(--hover-item);
+  border-right: 1px solid var(--hover-item);
+  min-width: 400px;
+  max-width: 600px;
+  height: 100vh;
+  /* overflow: scroll; */
+  overflow-y: scroll;
+  scrollbar-width: none;
+  scroll-behavior:smooth;
 }
 
 @media (max-width:498px){

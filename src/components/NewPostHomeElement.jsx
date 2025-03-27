@@ -2,6 +2,7 @@ import React, { memo, useRef } from 'react'
 import "./../styles/NewPostHomeElement.css"
 
 
+// NEW POST ELEMENT USED FOR FULL SCREEN HOME SCREEN NEW POST AND MODAL NEW POST AND MOBILE VIEW AS WELL
 const NewPostHomeElement=memo(()=>{
 
   const postRef = useRef();

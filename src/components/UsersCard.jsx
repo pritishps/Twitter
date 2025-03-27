@@ -1,5 +1,6 @@
 import React from 'react'
 
+// USER CARD UI COMPONENTS USED TO SHOW SUGGESTIONS
 function UsersCard({user}) {
     const {userName,userId,userImage} =  user
 

@@ -5,6 +5,8 @@ import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import ModalComponent from './ModalComponent';
 import NewPostHomeElement from './NewPostHomeElement';
 
+
+// PERMANENT NAV PANEL FOR ALL SCEREEN SIZES
 const NavPanel = memo(()=>{
   const navigate = useNavigate();
   const theme = useSelector(state=>state.theme);
@@ -26,6 +28,7 @@ const NavPanel = memo(()=>{
     
     <>
     {/* Nav Bar Desktop and Tablet Views */}
+    {/* NAVIGATION PANEL FOR DESKTOP SCREEN AND TABLET SCREEN */}
       <div className={`full-screen-side-nav-panel ${theme}`}>
         
         <div className='navigation-buttons-container'>
@@ -144,7 +147,7 @@ const NavPanel = memo(()=>{
 
 
 
-      {/* NEW POST SCREEN */}
+      {/* NEW POST SCREEN FOR FULL SCREEN ELEMENT USING THE MODAL COMPONENT*/}
       { newPostContainer &&
         <ModalComponent onClose={() => setNewPostContainer(false)}>
         <NewPostHomeElement />

@@ -1,11 +1,7 @@
 .post-container{
     display: flex;
     padding: 10px;
-    /* gap: 8px; */
-    /* justify-content: space-between; */
-    /* width: 100%; */
     border-bottom: 1px solid var(--hover-item);
-    /* width: 100%; */
     flex: 1;
 }
 .reaction-container > p{
@@ -25,12 +21,9 @@
     display: flex;
     justify-content: left;
     flex: 1;
-    /* padding: 0px 10px; */
-    /* flex-grow: 1; */
     width: 100%;
     gap: 5px;
     font-size: 11px;
-    /* color: var; */
     color: var(--secondary-text);
 }
 

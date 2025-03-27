@@ -2,9 +2,6 @@
     display: flex;
     background-color: inherit;
     justify-content: space-evenly;
-    /* overflow-x: scroll; */
-    /* width: 100%; */
-    /* scrollbar-width: none; */
 }
 
 .filter-type {
@@ -20,10 +17,7 @@
 .filter-type:hover{
     background-color: var(--hover-item);
 }
-/* 
-.filter-type:hover::after{
-    background-color: white;
-} */
+
 
 @media (pointer: coarse) {
     .filter-type:hover {
@@ -45,7 +39,6 @@
 
 
 .active-filter > p{
-    /* font-size: 15px; */
     color: var(--normal-text);
     font-weight: 800;
     border-bottom: 3px solid var(--highlight);

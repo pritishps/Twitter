@@ -1,17 +1,5 @@
-.resizable-div {
-  height: 100vh;
-  background-color: black;
-  overflow: auto;
-}
 
-.resizer {
-  width: 5px;
-  height: 100vh;
-  cursor: ew-resize;
-  background-color: gray;
-}
-
-
+/* THEME VARIABLES*/
 :root{
   --body-background:#ffffff;
   --normal-text:#0F1419;
@@ -30,7 +18,7 @@
   --secondary-text:#a1a1a1;
 }
 
-
+/* SETING THE TWITTER FONT (unofficial) */
 @font-face {
   font-family: "twitter";
   src: url("fonts/chirp-bold-web.woff") format("woff");

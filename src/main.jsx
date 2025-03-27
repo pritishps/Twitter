@@ -8,9 +8,11 @@ import { store } from './redux/store.js';
 import { Provider } from 'react-redux';
 
 createRoot(document.getElementById('root')).render(
-  // <StrictMode>
+  <StrictMode>
+
+    {/* WRAPING THE APP COMPONENT WITH STORE TO PROVIDIDE ACCESS TO REDUX STORE */}
     <Provider store={store}>
       <App />
     </Provider>
-  // </StrictMode>,
+ </StrictMode>,
 )

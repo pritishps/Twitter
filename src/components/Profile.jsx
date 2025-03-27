@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import "./../styles/Profile.css"
 import Feed from './Feed'
 
-
+// PROFILE COMPONENT 
 const Profile=memo(()=>{
 
     const feedfilters=["Post","Likes"]
@@ -45,6 +45,8 @@ const Profile=memo(()=>{
             </div>
         </div>
         
+
+        {/* FETCHING THE POSTS BY USER AND LIKED BY USER */}
       <Feed feedfilters={feedfilters} filterKey={filterKey} filterCriteria ={filterCriteria} url={"data/allPostData.json"}/>
 
     </div>

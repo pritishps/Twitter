@@ -4,6 +4,7 @@ import "../styles/Home.css";
 import NewPostHomeElement from './NewPostHomeElement';
 import Feed from './Feed';
 
+//HOME ELEMENT
 const Home=memo(()=>{
 
   const theme = useSelector(state=>state.theme);
@@ -26,10 +27,9 @@ const Home=memo(()=>{
     <div className={`home-panel ${theme}`}>
       <div className='feed-container'>
       <Feed feedfilters={feedfilters} filterKey={filterKey} filterCriteria ={filterCriteria} url={"data/allPostData.json"}>
+      {/* NEW POST ELEMET IS PASSED AS A CHILD PROPS TO RENDER BETWEEN THE TOP FILTERS AND THE POSTS FEED */}
         <NewPostHomeElement/>
       </Feed>
-        
-
       </div>
     </div>
 

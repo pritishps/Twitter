@@ -1,6 +1,8 @@
 import React, { memo } from 'react'
 import "./../styles/FeedFilterComponent.css"
 
+
+// COMPONENTS TO DISPLAY THE FILTERS AVAILBE AND UPDATE THE COMPONET AS PER USER'S SELECTION 
 const FeedFilterComponent =memo(({filterTypes,selected,setSelected})=>{
 
     const handleFilterSelect = (filter)=>{

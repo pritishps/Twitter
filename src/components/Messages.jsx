@@ -2,6 +2,7 @@ import React, { memo, useEffect,useState } from 'react'
 import "./../styles/Messages.css"
 import PageHeadingElement from './PageHeadingElement'
 
+// MESSAGES COMPONENT
 const Messages=memo(()=> {
 
     const [feedData,setFeedData] = useState([])
@@ -11,6 +12,7 @@ const Messages=memo(()=> {
     
     useEffect(()=>{
 
+        //FETCHING MESSAGE DATA
         const fetchData = async () => {
             try {
             const response = await fetch("data/messages.json");
@@ -41,8 +43,11 @@ const Messages=memo(()=> {
   return (
     <div className='feed-container'>
         <PageHeadingElement headingName={"Messages"} />
+        
         {isLoading && <h1 className='loader'></h1>}
         {isError && <h1>{isError}</h1>}
+
+        {/* MESSAGES ARE SHOWN ONE AFTER ANOTHER IN A LONG FEED */}
         {!isLoading && !isError &&
             feedData.map(messageData=>{
                 return(

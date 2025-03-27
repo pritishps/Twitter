@@ -3,6 +3,8 @@ import FeedFilterComponent from './FeedFilterComponent';
 import Post from './Post';
 import "./../styles/Feed.css"
 
+
+// FEED COMPONENT TO DISPLAY ANY KIND OF FEED
 const Feed =memo((props)=> {
 
     const {feedfilters,filterKey,filterCriteria,url} = props
@@ -14,6 +16,7 @@ const Feed =memo((props)=> {
     
     useEffect(()=>{
 
+        // DEFINING THE FETCHING DATA FUNCTION
     const fetchData = async () => {
         try {
         const response = await fetch(url);
@@ -27,8 +30,10 @@ const Feed =memo((props)=> {
                 dataItem[filterKey[selectedFeed]] === filterCriteria[selectedFeed]
             )
         })
-        await setIsLoading(false);
+
+        //ONLY UPDATE THE FEED IF ANY NEW DATA IS GIVEN ELSE KEEP THE SAME FEED
         if (JSON.stringify(newData) !== JSON.stringify(feedData)) {
+            setIsLoading(false);
             setFeedData(newData);
         }
         } catch (err) {
@@ -38,7 +43,7 @@ const Feed =memo((props)=> {
     };
 
     fetchData()
-    const intervalId = setInterval(fetchData, 3000);
+    const intervalId = setInterval(fetchData, 3000); //FETCH DATA IS CALLED AT EVERY 3 SECONDS TO MIMIC CONTINOUS API CALLS AND UPDATE THE FIELDS IF ANY NEW DATA IS AVAILABLE
     
     return () => {
         clearInterval(intervalId);

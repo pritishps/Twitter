@@ -1,8 +1,9 @@
 import React, { memo } from "react";
 import "./../styles/ModalComponent.css"
 
-
+// MODAL COMPONENT TODISPLAY ANY ELEMENTS INSIDE
 const ModalComponent = memo(({ onClose, children }) => {
+
 
   return (
     <div className="modal-overlay">

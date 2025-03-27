@@ -1,6 +1,5 @@
 .page-heading-element{
     color: var(--normal-text);
-    /* width: 100%; */
     font-size: 20px;
     font-weight: 600;
     border-bottom: 1px solid var(--hover-item);

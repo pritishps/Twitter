@@ -2,7 +2,7 @@ import React, { memo, useEffect, useState } from 'react'
 import "./../styles/Notifications.css"
 import PageHeadingElement from './PageHeadingElement'
 
-
+// NOTIFICATION COMPONENT TO DISPLAY ALL THE NOTIFICATIONS
 const Notifications =memo(()=> {
 
     const [feedData,setFeedData] = useState([])
@@ -12,6 +12,7 @@ const Notifications =memo(()=> {
 
       useEffect(()=>{
     
+        // FETCHES THE NOTIFICATION DATA FROM JSON
         const fetchData = async () => {
 
           try {
@@ -45,8 +46,10 @@ const Notifications =memo(()=> {
   return (
     <div className='feed-container'>
       <PageHeadingElement headingName={"Notifications"} />
+
       {isLoading && <h1 className='loader'></h1>}
       {isError && <h1>{isError}</h1>}
+      
         { !isLoading && !isError &&
             feedData.map(notification=>{
                 return(

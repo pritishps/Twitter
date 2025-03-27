@@ -2,7 +2,9 @@ import React from 'react'
 import "./../styles/FollowSuggestion.css"
 import UsersCard from './UsersCard'
 
+// FULL SCREEN FOLLOW SUGGESTION ELEMENT, oNLY DISPLAYED IN FULL SCREEN
 function FollowSuggestion() {
+    //DUMMY SUGGESTIONS DIRECTLY GIVEN
     const suggestions = [
         {
             userName : "Priyanka Mohanty",
@@ -30,6 +32,7 @@ function FollowSuggestion() {
   return (
     <div className='follow-suggestion'>
         <h1>Who to follow</h1>
+
         {
             suggestions.map(user=>{
                 return(
