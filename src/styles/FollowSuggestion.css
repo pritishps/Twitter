@@ -1,0 +1,90 @@
+.follow-suggestion{
+    display: block;
+    /* flex: 1; */
+    /* border: 1px solid white; */
+    box-shadow: 0px 0px 5px var(--normal-text);
+    min-width: 300px;
+    height: fit-content;
+    flex-shrink: none;
+    color: var(--normal-text);
+    margin-top: 90px;
+    margin-left:40px;
+    border-radius: 20px;
+    padding: 15px 0px;
+    font-size: 22px;
+    font-weight: 600;
+
+}
+
+.follow-suggestion > h1{
+    font-size: 22px;
+    font-weight: 600;
+    padding: 15px;
+}
+
+
+.user-card-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.user-card-container:hover{
+    background-color: var(--hover-item);
+    border-radius: 80px;
+}
+.user-card-container > div {
+    display: flex;
+    flex: 1;
+    width: 60%;
+}
+
+.user-card-container > div > img{
+    display: block;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.user-card-container > div > div > h1{
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0px;
+    white-space: nowrap;
+    width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+}
+
+.user-card-container > div >div  > p{
+    font-size: 12px;
+    color: var(--secondary-text);
+}
+
+
+.follow-button{
+    background-color: var(--normal-text);
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius:50px ;
+    color: var(--body-background);
+}
+
+.follow-button:hover{
+    background-color: var(--secondary-text);
+}
+
+@media (max-width: 1024px) {
+    .follow-suggestion{
+        display: none;
+    }
+    .user-card-container{
+        display: none;
+    }
+}

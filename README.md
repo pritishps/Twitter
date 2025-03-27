@@ -22,6 +22,7 @@ This project is a frontend-only clone of X.com (formerly Twitter) built using Vi
 │   │   ├── Explore.jsx
 │   │   ├── Feed.jsx
 │   │   ├── FeedFilterComponent.jsx
+│   │   ├── FollowSuggestions.jsx
 │   │   ├── Home.jsx
 │   │   ├── Messages.jsx
 │   │   ├── ModalComponent.jsx
@@ -30,6 +31,7 @@ This project is a frontend-only clone of X.com (formerly Twitter) built using Vi
 │   │   ├── PageHeadingElement.jsx
 │   │   ├── Post.jsx
 │   │   ├── Profile.jsx
+│   │   ├── UsersCards.jsx
 │   │
 │   ├── redux/
 │   │   ├── store.js
@@ -40,6 +42,7 @@ This project is a frontend-only clone of X.com (formerly Twitter) built using Vi
 │   │   ├── Explore.css
 │   │   ├── Feed.css
 │   │   ├── FeedFilterComponent.css
+│   │   ├── FollowSuggestions.css
 │   │   ├── Home.css
 │   │   ├── Messages.css
 │   │   ├── ModalComponent.css
@@ -82,6 +85,7 @@ Each component in the application serves a specific role in rendering and managi
 
 - **NewPostHomeElement.jsx**: UI for composing a new post.
 - **FeedFilterComponent.jsx**: Allows users to filter posts by categories (e.g., "For You", "Feed").
+- **UserCards.jsx**: UI for  displaying a list of users.
 
 ### Utility & Data Handling
 

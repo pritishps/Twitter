@@ -10,6 +10,8 @@ import Messages from "./components/Messages";
 import Profile from "./components/Profile";
 import Communities from "./components/Communities";
 import NewPostHomeElement from "./components/NewPostHomeElement";
+import FollowSuggestion from "./components/FollowSuggestion";
+import WildCard from "./components/WildCard";
 
 const App =()=> {
   const theme = useSelector(state=>state.theme);
@@ -26,7 +28,9 @@ const App =()=> {
             <Route path="/profile" element={<Profile /> } />
             <Route path="/communities" element={<Communities /> } />
             <Route path="/post" element={<NewPostHomeElement /> } />
+            <Route path="/*" element={<WildCard /> } />
           </Routes>
+        <FollowSuggestion/>
         </div>
       </BrowserRouter>
     </div>

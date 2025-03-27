@@ -6,6 +6,8 @@
 }
 
 .main-app-content{
+    display: flex;
+    width: 100%;
     flex: 0.8;
   }
 
@@ -30,6 +32,7 @@
     /* border: 1px solid var(--normal-text); */
     border-left: 1px solid var(--hover-item);
     border-right: 1px solid var(--hover-item);
+    min-width: 400px;
     max-width: 600px;
     height: 100vh;
     /* overflow: scroll; */
